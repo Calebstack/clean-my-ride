@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Clean My Ride Namur | Nettoyage mobile auto, intérieur & extérieur</title>
+  <meta name="description" content="Nettoyage mobile auto à Namur et alentours. Intérieur, extérieur et formules complètes dès 35 €. Déplacement gratuit dans un rayon de 15 km autour de Namur. Réservation par téléphone, WhatsApp ou email.">
+  <meta name="theme-color" content="#063b63">
+  <link rel="icon" href="assets/images/logo-320.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600;1,700;1,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <noscript><style>#loader{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AutoDetailing","name":"Clean My Ride","telephone":"+32484832166","email":"info.cm.ride@gmail.com","vatID":"BE1030969745","address":{"@type":"PostalAddress","streetAddress":"Rue du Petit Ry 11","postalCode":"5100","addressCountry":"BE"},"areaServed":"Namur","sameAs":["https://www.facebook.com/CleanMyRideNamur"]}
+  </script>
+</head>
+<body>
+  <div id="loader" aria-hidden="true"><img src="assets/images/logo-320.png" alt="" width="120" height="120"><i></i></div>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <!-- Utility bar -->
+  <div class="util">
+    <div class="wrap util__inner">
+      <span>Déplacement gratuit dans un rayon de 15&nbsp;km autour de Namur</span>
+      <span class="util__links">
+        <a href="tel:+32484832166">+32 484 83 21 66</a>
+        <a href="mailto:info.cm.ride@gmail.com">info.cm.ride@gmail.com</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Navigation. "Book now" lives inside the menu so it moves into the hamburger panel on medium screens and below. -->
+<header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Clean My Ride, accueil">
+        <img src="assets/images/logo-320.png" alt="Logo Clean My Ride" width="64" height="64">
+        <span class="brand__text">Clean My Ride<small>Entretien auto à Namur</small></span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#services">Services</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#results">Résultats</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#area">Zone & FAQ</a>
+        <a class="btn btn--sm nav__cta" href="#contact"><span>Réserver</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO
+         Background video: replace assets/video/hero.mp4 with your own file (same name) and it plays automatically.
+         It is muted, has no controls, and loops forever. See README.md for the recommended export settings. -->
+    <section class="hero">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback poster="assets/images/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__shade"></div>
+      <div class="hero__stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <p class="hero__badge"><span class="pulse"></span> Mobile car cleaning in Namur</p>
+          <h1><span>We come to you.</span> <span>Your car leaves</span> <span>spotless.</span></h1>
+          <p class="hero__lead">Interior, exterior and deep-clean packages at your door. Steam at 140°C, extraction shampooing and Koch Chemie wax, all without you queueing at a car wash.</p>
+          <div class="hero__actions">
+            <a class="btn btn--lg" href="#pricing"><span>See all prices</span></a>
+            <a class="btn btn--lg btn--ghost" href="tel:+32484832166"><span>Call 0484 83 21 66</span></a>
+          </div>
+        </div>
+
+        <aside class="quote" aria-labelledby="quoteTitle">
+          <div class="formhead">
+            <img src="assets/images/logo-320.png" alt="Clean My Ride" width="72" height="72">
+            <div>
+              <h2 id="quoteTitle">Get your price in 3 taps</h2>
+              <p>Instant estimate, no sign-up.</p>
+            </div>
+          </div>
+          <div class="quote__group">
+            <span class="quote__label">1. What needs cleaning?</span>
+            <div class="seg" id="qType">
+              <button type="button" data-v="interior" aria-pressed="true">Interior</button>
+              <button type="button" data-v="exterior" aria-pressed="false">Exterior</button>
+              <button type="button" data-v="combo" aria-pressed="false">Both</button>
+            </div>
+          </div>
+          <div class="quote__group">
+            <span class="quote__label">2. How thorough?</span>
+            <div class="seg" id="qLevel"></div>
+          </div>
+          <div class="quote__group">
+            <span class="quote__label">3. Your vehicle</span>
+            <div class="seg" id="qSize">
+              <button type="button" data-v="0" aria-pressed="true">City car</button>
+              <button type="button" data-v="10" aria-pressed="false">Sedan</button>
+              <button type="button" data-v="20" aria-pressed="false">SUV</button>
+            </div>
+          </div>
+          <div class="quote__result">
+            <div class="quote__price" aria-live="polite"><sup>€</sup><span id="qPrice">45</span></div>
+            <p id="qInc">Complete vacuuming, plastics and interior windows.</p>
+          </div>
+          <a class="btn btn--block" id="qBook" href="#contact"><span>Book this package</span></a>
+        </aside>
+      </div>
+
+      <ul class="hero__facts wrap" aria-label="Key facts">
+        <li><strong>From €35</strong>exterior wash</li>
+        <li><strong>15 km</strong>free travel from Namur</li>
+        <li><strong>140°C</strong>heated steam cleaning</li>
+        <li><strong>Duo</strong>two vehicles, one visit</li>
+      </ul>
+    </section>
+
+    <!-- RIBBON -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>Interior cleaning</span><i></i><span>Exterior wash</span><i></i><span>Steam 140°C</span><i></i><span>Headlight restoration</span><i></i><span>Seat shampooing</span><i></i><span>Protector wax</span><i></i><span>Pet hair removal</span><i></i><span>Engine cleaning</span><i></i>
+        <span>Interior cleaning</span><i></i><span>Exterior wash</span><i></i><span>Steam 140°C</span><i></i><span>Headlight restoration</span><i></i><span>Seat shampooing</span><i></i><span>Protector wax</span><i></i><span>Pet hair removal</span><i></i><span>Engine cleaning</span><i></i>
+      </div>
+    </div>
+
+    <!-- SERVICES (bento)
+         Tile photos: replace the files in assets/images/services/ (interior.jpg, exterior.jpg, both.jpg) with your own. -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Everything your car needs, brought to your door</h2>
+          <p>Pick interior, exterior or both. Each comes in three levels, from a quick refresh to a full deep clean.</p>
+        </div>
+
+        <div class="bento">
+          <article class="tile tile--interior reveal">
+            <img class="tile__img" src="assets/images/services/interior.jpg" alt="Freshly cleaned car interior" width="1400" height="1000" loading="lazy" decoding="async">
+            <div class="tile__body">
+              <h3>Interior</h3>
+              <p>Vacuuming, dashboard care with Tornador, windows, door panels, carpet extraction and seat shampooing. Leather conditioning, deodoriser and air freshener at the top level.</p>
+              <a class="link" href="#pricing" data-tab="interior">Interior from €45</a>
+            </div>
+          </article>
+
+          <article class="tile tile--exterior reveal">
+            <img class="tile__img" src="assets/images/services/exterior.jpg" alt="Freshly washed car exterior" width="1400" height="1000" loading="lazy" decoding="async">
+            <div class="tile__body">
+              <h3>Exterior</h3>
+              <p>High-pressure wash and hand drying, wheels and tyres, decontamination, insect mark removal and Koch Chemie protector wax.</p>
+              <a class="link" href="#pricing" data-tab="exterior">Exterior from €35</a>
+            </div>
+          </article>
+
+          <article class="tile tile--combo reveal">
+            <img class="tile__img" src="assets/images/services/both.jpg" alt="Car cleaned inside and out" width="1400" height="1000" loading="lazy" decoding="async">
+            <div class="tile__body">
+              <h3>Interior + exterior</h3>
+              <p>The full treatment in one visit. The Duo package cleans two vehicles for €120.</p>
+              <a class="link" href="#pricing" data-tab="combo">Combo from €70</a>
+            </div>
+          </article>
+
+          <div class="mini reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></svg><b>Headlight restoration</b><span>€40</span></div>
+          <div class="mini reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40c-4-6 4-8 0-14s4-8 0-14M24 40c-4-6 4-8 0-14s4-8 0-14M34 40c-4-6 4-8 0-14s4-8 0-14"/></svg><b>Steam cleaning, 140°C</b><span>Quote</span></div>
+          <div class="mini reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="16" width="30" height="20" rx="3"/><path d="M14 16v-5h10v5M38 22h5v8h-5M14 24v6M22 24v6M30 24v6"/></svg><b>Engine cleaning</b><span>€40</span></div>
+          <div class="mini reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="14" cy="20" r="4"/><circle cx="24" cy="14" r="4"/><circle cx="34" cy="20" r="4"/><path d="M24 24c-8 0-12 6-10 11 2 4 6 2 10 2s8 2 10-2c2-5-2-11-10-11Z"/></svg><b>Pet hair removal</b><span>€20</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--tint slant-top" id="pricing">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Clear prices, no surprises</h2>
+          <p>Prices below are for a city car. Choose your vehicle size and every price updates.</p>
+        </div>
+
+        <div class="controls reveal">
+          <div class="tabs" role="tablist" aria-label="Service type">
+            <button role="tab" id="tab-interior" aria-selected="true" aria-controls="panel" data-tab="interior">Interior</button>
+            <button role="tab" id="tab-exterior" aria-selected="false" aria-controls="panel" data-tab="exterior">Exterior</button>
+            <button role="tab" id="tab-combo" aria-selected="false" aria-controls="panel" data-tab="combo">Interior &amp; exterior</button>
+          </div>
+          <fieldset class="sizes">
+            <legend>Vehicle size</legend>
+            <label><input type="radio" name="size" value="0" checked><span>City car</span></label>
+            <label><input type="radio" name="size" value="10"><span>Sedan <em>+€10</em></span></label>
+            <label><input type="radio" name="size" value="20"><span>SUV <em>+€20</em></span></label>
+          </fieldset>
+        </div>
+
+        <div class="plans" id="panel" role="tabpanel" aria-live="polite"></div>
+        <p class="note" id="plan-note"></p>
+
+        <h3 class="sub reveal">Add-ons and other services</h3>
+        <div class="addons reveal">
+          <div class="addon"><span>Headlight polishing and restoration</span><b>€40</b></div>
+          <div class="addon"><span>Hand engine cleaning<small>Plastic surfaces, engine bay cleaning and shine</small></span><b>€40</b></div>
+          <div class="addon"><span>Seat shampooing, 2 seats</span><b>€25</b></div>
+          <div class="addon"><span>Seat shampooing, 5 seats</span><b>€70</b></div>
+          <div class="addon"><span>Seat shampooing, 7 seats</span><b>€60</b></div>
+          <div class="addon"><span>Pet hair removal</span><b>€20</b></div>
+          <div class="addon addon--quote"><span>Heated steam-water cleaning at 140°C</span><b>Quote</b></div>
+          <div class="addon addon--quote"><span>Very dirty vehicle(s)</span><b>Quote</b></div>
+          <div class="addon addon--quote"><span>Other requests</span><b>Quote</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="band" id="how">
+      <div class="band__glow" aria-hidden="true"><i></i><i></i></div>
+      <div class="band__stripes" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Booking takes one message</h2>
+          <p>No account and no deposit form. Tell us what you need and we bring the rest.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__n" aria-hidden="true">1</span>
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+            <h3>Tell us your car and package</h3>
+            <p>Call, message us on WhatsApp or Facebook, or use the form below.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n" aria-hidden="true">2</span>
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+            <h3>Pick a time and place</h3>
+            <p>We confirm a slot and come to your home or workplace.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n" aria-hidden="true">3</span>
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2L12 3Z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8L19 17Z"/></svg>
+            <h3>We clean, you carry on</h3>
+            <p>Get on with your day and collect a car that looks and smells new.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER
+         Replace assets/images/compare/before.jpg and after.jpg with two photos of the same car from the same angle. -->
+    <section class="section" id="results">
+      <div class="wrap split">
+        <div class="split__text reveal">
+          <h2>See the difference</h2>
+          <p>Drag the handle to compare a car before and after a Premium clean.</p>
+          <a class="btn" href="#contact"><span>Get results like this</span></a>
+        </div>
+        <div class="compare-frame reveal">
+          <div class="compare" id="compare">
+            <img src="assets/images/compare/after.png" alt="After cleaning" width="1600" height="1200" draggable="false" loading="lazy" decoding="async">
+            <div class="compare__before"><img src="assets/images/compare/before.png" alt="Before cleaning" width="1600" height="1200" draggable="false" loading="lazy" decoding="async"></div>
+            <span class="tag tag--before">Before</span><span class="tag tag--after">After</span>
+            <div class="compare__bar" aria-hidden="true"><i></i></div>
+            <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY
+         20 photo slots. Replace assets/images/gallery/work-01.jpg ... work-20.jpg with your own photos (same file names).
+         Any photo shape works; the grid adapts. -->
+    <section class="section section--tint slant-top" id="gallery">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Our work</h2>
+          <p>Recent interiors, exteriors and finishes. Tap a photo to enlarge.</p>
+        </div>
+        <div class="gallery" id="galleryGrid">
+          <a class="shot" href="assets/images/gallery/667593295_122117524293237234_6501536520043896627_n.jpg"><img src="assets/images/gallery/667593295_122117524293237234_6501536520043896627_n.jpg" alt="Cleaned vehicle interior" width="800" height="1000" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/668611191_122117524317237234_7576877953728357457_n.jpg"><img src="assets/images/gallery/668611191_122117524317237234_7576877953728357457_n.jpg" alt="Cleaned vehicle exterior" width="800" height="800" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/668639716_122117524305237234_7748569480968690478_n.jpg"><img src="assets/images/gallery/668639716_122117524305237234_7748569480968690478_n.jpg" alt="Cleaned car interior detail" width="900" height="675" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/669264081_122117886771237234_4777967004028046928_n.jpg"><img src="assets/images/gallery/669264081_122117886771237234_4777967004028046928_n.jpg" alt="Car exterior after wash" width="800" height="1000" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/670097644_122117886819237234_7347286576882906696_n.jpg"><img src="assets/images/gallery/670097644_122117886819237234_7347286576882906696_n.jpg" alt="Cleaned vehicle seats" width="900" height="600" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/670542312_122117886801237234_346210002613978476_n.jpg"><img src="assets/images/gallery/670542312_122117886801237234_346210002613978476_n.jpg" alt="Car dashboard cleaned" width="800" height="800" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/670988015_122117524329237234_1505106507176013793_n.jpg"><img src="assets/images/gallery/670988015_122117524329237234_1505106507176013793_n.jpg" alt="Vehicle exterior shine" width="750" height="1000" loading="lazy" decoding="async"></a>
+          <a class="shot" href="assets/images/gallery/671016155_122117886765237234_5083549483270095082_n.jpg"><img src="assets/images/gallery/671016155_122117886765237234_5083549483270095082_n.jpg" alt="Complete interior exterior clean" width="900" height="675" loading="lazy" decoding="async"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREA + FAQ -->
+    <section class="section section--mist" id="area">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Service area and FAQ</h2>
+          <p>We come to you anywhere within 15&nbsp;km of Namur. Here is where we work and the questions we hear most.</p>
+        </div>
+        <div class="area">
+          <div class="area__map reveal">
+            <h3>Where we come to you</h3>
+            <svg viewBox="0 0 400 400" role="img" aria-label="Free travel within 15 kilometres of Namur">
+              <defs>
+                <radialGradient id="rg"><stop offset="0" stop-color="#0aa3f5" stop-opacity=".5"/><stop offset="1" stop-color="#0aa3f5" stop-opacity=".08"/></radialGradient>
+              </defs>
+              <circle cx="200" cy="200" r="190" class="ring ring--out"/>
+              <circle cx="200" cy="200" r="120" fill="url(#rg)" class="ring ring--in"/>
+              <circle cx="200" cy="200" r="120" class="pulse-ring"/>
+              <path d="M200 176c-11 0-20 9-20 20 0 15 20 36 20 36s20-21 20-36c0-11-9-20-20-20Z" class="pin"/>
+              <circle cx="200" cy="196" r="7" fill="#fff"/>
+              <text x="200" y="256" text-anchor="middle" class="t1">Namur</text>
+              <text x="200" y="78" text-anchor="middle" class="t2">Free within 15 km</text>
+              <text x="200" y="386" text-anchor="middle" class="t3">Beyond 15 km: travel fee, quote on request</text>
+            </svg>
+          </div>
+          <div class="area__faq reveal">
+            <h3>Frequently asked questions</h3>
+            <div class="faq">
+              <details open><summary>Do you travel to me?</summary><div class="faq__a"><p>Yes. Travel is free within a 15 km radius of Namur. Beyond that an extra travel fee applies, so contact us for a personalised quote.</p></div></details>
+              <details><summary>How do I book?</summary><div class="faq__a"><p>Call +32 484 83 21 66, message us on WhatsApp or Facebook, email info.cm.ride@gmail.com, or use the form on this page.</p></div></details>
+              <details><summary>Is the price the same for every car?</summary><div class="faq__a"><p>The advertised price is for a city car. A sedan adds €10 and an SUV adds €20.</p></div></details>
+              <details><summary>What if my car is very dirty?</summary><div class="faq__a"><p>Very dirty vehicles, heated steam-water cleaning at 140°C and other special requests are priced by quote. Send us a message with a photo and we will come back with a price.</p></div></details>
+              <details><summary>Can you clean two cars at once?</summary><div class="faq__a"><p>Yes. The Duo package covers interior and exterior for two vehicles at €120.</p></div></details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap cta__inner reveal">
+        <div>
+          <h2>Ready for a car that feels new?</h2>
+          <p>Call or message us and we will find a time that suits you.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--white btn--lg" href="tel:+32484832166"><span>Call now</span></a>
+          <a class="btn btn--ghost btn--lg" href="https://wa.me/32484832166" target="_blank" rel="noopener"><span>WhatsApp us</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--mist" id="contact">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2>Book or ask for a quote</h2>
+          <p>Fill in the form and we will reply quickly. You can also call or message us directly.</p>
+        </div>
+
+        <ul class="reach reveal">
+          <li><a href="tel:+32484832166"><span class="reach__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><span class="reach__txt"><b>Phone</b>+32 484 83 21 66</span></a></li>
+          <li><a href="mailto:info.cm.ride@gmail.com"><span class="reach__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="reach__txt"><b>Email</b>info.cm.ride<wbr>@gmail.com</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+du+Petit+Ry+11,+5100+Namur" target="_blank" rel="noopener"><span class="reach__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="reach__txt"><b>Address</b>Rue du Petit Ry 11, 5100 Namur</span></a></li>
+          <li><a href="https://wa.me/32484832166" target="_blank" rel="noopener"><span class="reach__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.2A8.5 8.5 0 1 1 8.4 18.8L4 20Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-.8-.3-1.8-1.3-2.1-2.1l.8-1-1-2L9 8.5Z"/></svg></span><span class="reach__txt"><b>WhatsApp</b>Message us directly</span></a></li>
+        </ul>
+
+        <div class="contact">
+          <form class="form reveal" id="form" novalidate>
+            <div class="formhead">
+              <img src="assets/images/logo-320.png" alt="Clean My Ride" width="72" height="72">
+              <div>
+                <h3>Booking request</h3>
+                <p>Tell us what you need. We reply quickly.</p>
+              </div>
+            </div>
+            <div class="row">
+              <label>Name<input name="name" autocomplete="name" required></label>
+              <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+            </div>
+            <div class="row">
+              <label>Vehicle<select name="vehicle"><option>City car</option><option>Sedan</option><option>SUV</option></select></label>
+              <label>Package<select name="package" id="packageSelect"></select></label>
+            </div>
+            <label>Address and preferred date<textarea name="message" rows="3" placeholder="Where should we come, and when suits you?"></textarea></label>
+            <div class="form__submit">
+              <button class="btn" type="submit"><span>Send by email</span></button>
+            </div>
+          </form>
+
+          <div class="map reveal">
+            <iframe title="Map of Rue du Petit Ry 11, 5100 Namur" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+              src="https://www.google.com/maps?q=Rue+du+Petit+Ry+11,+5100+Namur,+Belgium&amp;z=14&amp;output=embed"></iframe>
+            <div class="map__card">
+              <b>Clean My Ride</b>
+              <span>Rue du Petit Ry 11, 5100 Namur</span>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+du+Petit+Ry+11,+5100+Namur" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__glow" aria-hidden="true"><i></i><i></i></div>
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="footer__logo" aria-label="Back to top"><img src="assets/images/logo-320.png" alt="Clean My Ride" width="88" height="88"></a>
+        <p>Mobile car cleaning in Namur and the surrounding area. We bring the equipment, you keep your day.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/CleanMyRideNamur" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+          <a href="https://wa.me/32484832166" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path class="stroke" d="M4 20l1.3-4.2A8.5 8.5 0 1 1 8.4 18.8L4 20Z"/><path class="stroke" d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-.8-.3-1.8-1.3-2.1-2.1l.8-1-1-2L9 8.5Z"/></svg></a>
+          <a href="mailto:info.cm.ride@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v.5l-10 6.5L2 6.5V6a1 1 0 0 1 1-1Zm-1 4.3V18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V9.3l-10 6.5L2 9.3Z"/></svg></a>
+          <a href="tel:+32484832166" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6a1 1 0 0 1-.3 1l-2.2 2.2Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#area">Area &amp; FAQ</a></li>
+          <li><a href="#contact">Book now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+32484832166">+32 484 83 21 66</a></li>
+          <li><a href="mailto:info.cm.ride@gmail.com">info.cm.ride@gmail.com</a></li>
+          <li>Rue du Petit Ry 11, 5100 Namur</li>
+          <li>Free travel within 15 km of Namur</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">Clean My Ride</div>
+    <div class="wrap footer__bar">
+      <span>&copy; <span id="year"></span> Clean My Ride. VAT BE1030 969 745</span>
+      <a class="totop" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+    <img alt="">
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <span class="lightbox__count" aria-live="polite"></span>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
