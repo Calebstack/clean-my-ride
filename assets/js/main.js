@@ -5,65 +5,65 @@
   var PLANS = {
     interior: [
       { level: "Classic", price: 45, items: [
-        "Complete vacuuming", "Cleaning of plastic surfaces", "Cleaning of interior windows"
+        "Aspiration complète", "Nettoyage des surfaces plastiques", "Nettoyage des vitres intérieures"
       ]},
       { level: "Premium", price: 95, top: true, items: [
-        "Complete dashboard cleaning and care with Tornador",
-        "Cleaning and maintenance of all interior plastics",
-        "Dry vacuuming of passenger compartment and trunk",
-        "Interior window cleaning",
-        "Door panel cleaning",
-        "Cleaning the inside of doors",
-        "Complete carpet washing with an extraction cleaner",
-        "Leather conditioning"
+        "Nettoyage et soin complet du tableau de bord au Tornador",
+        "Nettoyage et entretien de tous les plastiques intérieurs",
+        "Aspiration à sec de l'habitacle et du coffre",
+        "Nettoyage des vitres intérieures",
+        "Nettoyage des panneaux de portes",
+        "Nettoyage de l'intérieur des portes",
+        "Lavage complet des moquettes à l'extracteur",
+        "Conditionnement du cuir"
       ]},
       { level: "All-in", price: 110, items: [
-        "Door frame cleaning",
-        "Complete dashboard cleaning and care with Tornador",
-        "Protection and shine for interior plastics",
-        "Vacuuming and shampooing of carpets and trunk",
-        "Shampooing of fabric seats and leather treatment",
-        "Deep cleaning of interior windows",
-        "Textile deodoriser",
-        "Air freshener"
+        "Nettoyage des seuils de portes",
+        "Nettoyage et soin complet du tableau de bord au Tornador",
+        "Protection et brillance des plastiques intérieurs",
+        "Aspiration et shampouinage des moquettes et du coffre",
+        "Shampouinage des sièges en tissu et traitement cuir",
+        "Nettoyage en profondeur des vitres intérieures",
+        "Désodorisant textile",
+        "Parfum d'ambiance"
       ]}
     ],
     exterior: [
       { level: "Classic", price: 35, items: [
-        "High-pressure wash", "Hand drying", "Wheel cleaning"
+        "Lavage haute pression", "Séchage à la main", "Nettoyage des jantes"
       ]},
       { level: "Premium", price: 55, top: true, items: [
-        "Exterior pre-wash",
-        "Exterior wash",
-        "Removal of light insect marks",
-        "Cleaning of wheels or hubcaps (exterior parts)",
-        "Exterior window cleaning",
-        "Removal of impurities through decontamination"
+        "Prélavage extérieur",
+        "Lavage extérieur",
+        "Élimination des traces d'insectes légères",
+        "Nettoyage des jantes ou enjoliveurs (parties extérieures)",
+        "Nettoyage des vitres extérieures",
+        "Élimination des impuretés par décontamination"
       ]},
       { level: "All-in", price: 80, items: [
-        "Exterior pre-wash",
-        "Exterior wash",
-        "Wheel and tyre cleaning",
-        "Removal of impurities through decontamination",
-        "Cleaning and restoration of exterior plastics",
-        "Protector wax polishing (Koch Chemie)",
-        "Tyre shine",
-        "Removal of light insect marks"
+        "Prélavage extérieur",
+        "Lavage extérieur",
+        "Nettoyage des jantes et pneus",
+        "Élimination des impuretés par décontamination",
+        "Nettoyage et rénovation des plastiques extérieurs",
+        "Polissage cire protectrice (Koch Chemie)",
+        "Lustrage pneus",
+        "Élimination des traces d'insectes légères"
       ]}
     ],
     combo: [
       { level: "Classic", price: 70, top: true, items: [
-        "Complete vacuuming", "Cleaning of plastic surfaces",
-        "Cleaning of interior and exterior windows",
-        "High-pressure wash", "Hand drying", "Wheel cleaning"
+        "Aspiration complète", "Nettoyage des surfaces plastiques",
+        "Nettoyage des vitres intérieures et extérieures",
+        "Lavage haute pression", "Séchage à la main", "Nettoyage des jantes"
       ]},
       { level: "Duo Classic", price: 120, vehicles: 2, items: [
-        "Everything in Classic", "For 2 vehicles"
+        "Tout le Classic", "Pour 2 véhicules"
       ]}
     ]
   };
-  var TAB_NAMES = { interior: "Interior", exterior: "Exterior", combo: "Interior & exterior" };
-  var SIZE_NAMES = { 0: "City car", 10: "Sedan", 20: "SUV" };
+  var TAB_NAMES = { interior: "Intérieur", exterior: "Extérieur", combo: "Intérieur & extérieur" };
+  var SIZE_NAMES = { 0: "Citadine", 10: "Berline", 20: "SUV" };
 
   var state = { tab: "interior", size: 0 };
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -98,7 +98,7 @@
       '</article>';
     }).join("");
     note.textContent = state.tab === "combo"
-      ? "Sedan and SUV supplements apply to each vehicle in the Duo package."
+      ? "Les suppléments Berline et SUV s'appliquent à chaque véhicule dans la formule Duo."
       : "";
   }
 
@@ -133,7 +133,7 @@
   Object.keys(PLANS).forEach(function (k) {
     PLANS[k].forEach(function (p) { opts.push(TAB_NAMES[k] + " " + p.level); });
   });
-  opts.push("Add-ons or other service", "Not sure yet, please advise");
+  opts.push("Options ou autre service", "Pas sûr encore, merci de me conseiller");
   sel.innerHTML = opts.map(function (o) { return "<option>" + o + "</option>"; }).join("");
 
   panel.addEventListener("click", function (e) {
@@ -160,8 +160,8 @@
   }
   function summary(p) {
     var it = p.items;
-    if (p.vehicles) return "Interior and exterior Classic clean for 2 vehicles.";
-    return it.slice(0, 3).join(", ") + (it.length > 3 ? " and " + (it.length - 3) + " more." : ".");
+    if (p.vehicles) return "Nettoyage intérieur et extérieur formule Classic pour 2 véhicules.";
+    return it.slice(0, 3).join(", ") + (it.length > 3 ? " et " + (it.length - 3) + " autres." : ".");
   }
   function renderQuote() {
     var plans = PLANS[q.type];
@@ -211,7 +211,7 @@
       f[n].classList.toggle("invalid", bad);
       if (bad) ok = false;
     });
-    if (!ok) { hint.textContent = "Please add your name and phone number."; return; }
+    if (!ok) { hint.textContent = "Veuillez indiquer votre nom et votre téléphone."; return; }
     var body = [
       "Name: " + f.name.value.trim(),
       "Phone: " + f.phone.value.trim(),
@@ -222,7 +222,7 @@
     ].join("\n");
     window.location.href = "mailto:info.cm.ride@gmail.com?subject=" +
       encodeURIComponent("Booking request: " + f.package.value) + "&body=" + encodeURIComponent(body);
-    hint.textContent = "Your email app should open. If it does not, write to info.cm.ride@gmail.com.";
+    hint.textContent = "Votre application email devrait s'ouvrir. Si ce n'est pas le cas, écrivez à info.cm.ride@gmail.com.";
   });
 
   /* ---------- Hamburger menu (medium screens and below) ----------
@@ -238,7 +238,7 @@
   function stopMenuAnims() { menuAnims.forEach(function (a) { a.cancel(); }); menuAnims = []; }
   function setBurger(open) {
     burger.setAttribute("aria-expanded", String(open));
-    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    burger.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
   }
   function openMenu() {
     if (!mobileMq.matches || menuOpen) return;
